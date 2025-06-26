@@ -1,3 +1,4 @@
+
 import { ArrowRight, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -99,12 +100,24 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-50">
         <div className="text-center max-w-6xl mx-auto">
           <div className="animate-fade-in relative z-50">
-            <h1 className="text-6xl md:text-8xl font-bold mb-12 leading-tight relative z-50">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight relative z-50">
               We Create
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent block animate-pulse mb-12 relative z-50">
+            </h1>
+            <div className="relative z-50 mb-16">
+              <span 
+                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-6xl md:text-8xl font-bold animate-pulse block leading-none"
+                style={{ 
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                  display: 'block',
+                  paddingBottom: '0.25em',
+                  lineHeight: '0.9'
+                }}
+              >
                 Digital Magic
               </span>
-            </h1>
+            </div>
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
