@@ -1,4 +1,3 @@
-
 import { ArrowRight, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -13,73 +12,96 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Enhanced Animated Background */}
+      {/* Dramatically Enhanced Animated Background */}
       <div className="absolute inset-0 bg-black">
-        {/* Animated gradient layers */}
+        {/* Multiple animated gradient layers with intense movement */}
         <div 
-          className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-blue-900/30 animate-pulse"
+          className="absolute inset-0 bg-gradient-to-br from-purple-600/40 via-black to-blue-600/40"
           style={{ 
-            transform: `translateY(${scrollY * 0.5}px)`,
-            animationDuration: '4s'
+            transform: `translateY(${scrollY * 0.5}px) scale(${1 + Math.sin(Date.now() * 0.001) * 0.1})`,
+            animation: 'pulse 3s infinite'
           }}
         ></div>
         <div 
-          className="absolute inset-0 bg-gradient-to-tr from-pink-900/20 via-transparent to-purple-900/20"
+          className="absolute inset-0 bg-gradient-to-tr from-pink-600/30 via-purple-600/20 to-red-600/30"
           style={{ 
-            transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.02}deg)`,
-            animation: 'pulse 6s infinite'
+            transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.05 + Math.sin(Date.now() * 0.002) * 10}deg)`,
+            animation: 'pulse 4s infinite reverse'
+          }}
+        ></div>
+        <div 
+          className="absolute inset-0 bg-gradient-to-bl from-blue-600/25 via-transparent to-purple-600/35"
+          style={{ 
+            transform: `translateX(${Math.sin(Date.now() * 0.001) * 50}px) translateY(${scrollY * 0.4}px)`,
+            animation: 'pulse 5s infinite'
           }}
         ></div>
         
-        {/* Moving geometric shapes */}
+        {/* Large moving geometric shapes with intense animation */}
         <div className="absolute inset-0">
           <div 
-            className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-bounce"
+            className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl"
             style={{ 
-              transform: `translateY(${scrollY * 0.2}px)`,
-              animationDuration: '8s'
+              transform: `translateY(${scrollY * 0.2 + Math.sin(Date.now() * 0.002) * 30}px) translateX(${Math.cos(Date.now() * 0.001) * 20}px)`,
+              animation: 'float 6s ease-in-out infinite'
             }}
           ></div>
           <div 
-            className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"
+            className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-gradient-to-l from-blue-500/30 to-purple-500/30 rounded-full blur-3xl"
             style={{ 
-              transform: `translateY(${scrollY * 0.4}px)`,
-              animationDuration: '10s'
+              transform: `translateY(${scrollY * 0.4 + Math.cos(Date.now() * 0.0015) * 40}px) translateX(${Math.sin(Date.now() * 0.001) * 30}px)`,
+              animation: 'float 8s ease-in-out infinite reverse'
             }}
           ></div>
           <div 
-            className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-pink-500/5 to-red-500/5 rounded-full blur-2xl"
+            className="absolute top-1/3 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/25 to-red-500/25 rounded-full blur-2xl"
             style={{ 
-              transform: `translate(-50%, -50%) translateY(${scrollY * 0.6}px) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
-              animation: 'pulse 12s infinite'
+              transform: `translateY(${scrollY * 0.6 + Math.sin(Date.now() * 0.003) * 25}px) scale(${1 + Math.cos(Date.now() * 0.002) * 0.2})`,
+              animation: 'pulse 7s infinite'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-1/3 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-2xl"
+            style={{ 
+              transform: `translateY(${Math.cos(Date.now() * 0.0025) * 35}px) translateX(${Math.sin(Date.now() * 0.002) * 25}px)`,
+              animation: 'float 9s ease-in-out infinite'
             }}
           ></div>
         </div>
         
-        {/* Floating particles */}
+        {/* Enhanced floating particles with more movement */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <div
               key={i}
-              className={`absolute w-2 h-2 bg-purple-400/20 rounded-full animate-pulse`}
+              className={`absolute w-3 h-3 bg-purple-400/30 rounded-full animate-pulse`}
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${3 + Math.random() * 4}s`,
-                transform: `translateY(${Math.sin((scrollY + i * 100) * 0.01) * 20}px)`
+                animationDuration: `${2 + Math.random() * 3}s`,
+                transform: `translateY(${Math.sin((Date.now() * 0.001) + i * 100) * 40}px) translateX(${Math.cos((Date.now() * 0.0008) + i * 50) * 30}px)`
               }}
             />
           ))}
         </div>
+
+        {/* Additional animated overlay patterns */}
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/10 to-transparent"
+          style={{ 
+            transform: `translateX(${Math.sin(Date.now() * 0.001) * 100}px)`,
+            animation: 'pulse 6s infinite'
+          }}
+        ></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-50">
         <div className="text-center max-w-6xl mx-auto">
-          <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-12 leading-tight">
+          <div className="animate-fade-in relative z-50">
+            <h1 className="text-6xl md:text-8xl font-bold mb-12 leading-tight relative z-50">
               We Create
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent block animate-pulse mb-8">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent block animate-pulse mb-12 relative z-50">
                 Digital Magic
               </span>
             </h1>
