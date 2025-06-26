@@ -11,11 +11,15 @@ import Stats from "../components/Stats";
 import Process from "../components/Process";
 import Technologies from "../components/Technologies";
 import CaseStudies from "../components/CaseStudies";
-import FAQ from "../components/FAQ";
 import Team from "../components/Team";
 import BlogPreview from "../components/BlogPreview";
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "DEH Media - Digital Transformation & Marketing Agency";
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
@@ -30,7 +34,6 @@ const Home = () => {
       <Team />
       <Testimonials />
       <BlogPreview />
-      <FAQ />
       <Contact />
       <Footer />
     </div>

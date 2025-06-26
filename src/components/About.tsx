@@ -1,11 +1,11 @@
 
-import { Award, Users, Coffee, Heart } from "lucide-react";
+import { Users, Coffee, Heart, Target } from "lucide-react";
 
 const stats = [
-  { icon: <Award className="w-8 h-8" />, number: "200+", label: "Projects Completed" },
-  { icon: <Users className="w-8 h-8" />, number: "50+", label: "Happy Clients" },
+  { icon: <Target className="w-8 h-8" />, number: "700+", label: "Projects Completed" },
+  { icon: <Users className="w-8 h-8" />, number: "500+", label: "Happy Clients" },
   { icon: <Coffee className="w-8 h-8" />, number: "2000+", label: "Cups of Coffee" },
-  { icon: <Heart className="w-8 h-8" />, number: "10", label: "Years of Passion" }
+  { icon: <Heart className="w-8 h-8" />, number: "15", label: "Years of Passion" }
 ];
 
 const About = () => {

@@ -13,38 +13,73 @@ const Hero = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Parallax Background Layers */}
-      <div 
-        className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20"
-        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
-      ></div>
-      <div 
-        className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.1),transparent_50%)]"
-        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
-      ></div>
-      
-      {/* Floating Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Enhanced Animated Background */}
+      <div className="absolute inset-0 bg-black">
+        {/* Animated gradient layers */}
         <div 
-          className="absolute top-20 left-10 w-4 h-4 bg-purple-500/30 rounded-full animate-pulse"
-          style={{ transform: `translateY(${scrollY * 0.2}px)` }}
+          className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-black to-blue-900/30 animate-pulse"
+          style={{ 
+            transform: `translateY(${scrollY * 0.5}px)`,
+            animationDuration: '4s'
+          }}
         ></div>
         <div 
-          className="absolute top-40 right-20 w-6 h-6 bg-pink-500/20 rounded-full animate-bounce"
-          style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+          className="absolute inset-0 bg-gradient-to-tr from-pink-900/20 via-transparent to-purple-900/20"
+          style={{ 
+            transform: `translateY(${scrollY * 0.3}px) rotate(${scrollY * 0.02}deg)`,
+            animation: 'pulse 6s infinite'
+          }}
         ></div>
-        <div 
-          className="absolute bottom-40 left-1/4 w-8 h-8 bg-blue-500/10 rounded-full animate-pulse"
-          style={{ transform: `translateY(${scrollY * 0.6}px)` }}
-        ></div>
+        
+        {/* Moving geometric shapes */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-bounce"
+            style={{ 
+              transform: `translateY(${scrollY * 0.2}px)`,
+              animationDuration: '8s'
+            }}
+          ></div>
+          <div 
+            className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"
+            style={{ 
+              transform: `translateY(${scrollY * 0.4}px)`,
+              animationDuration: '10s'
+            }}
+          ></div>
+          <div 
+            className="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-r from-pink-500/5 to-red-500/5 rounded-full blur-2xl"
+            style={{ 
+              transform: `translate(-50%, -50%) translateY(${scrollY * 0.6}px) scale(${1 + Math.sin(scrollY * 0.01) * 0.1})`,
+              animation: 'pulse 12s infinite'
+            }}
+          ></div>
+        </div>
+        
+        {/* Floating particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className={`absolute w-2 h-2 bg-purple-400/20 rounded-full animate-pulse`}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 4}s`,
+                transform: `translateY(${Math.sin((scrollY + i * 100) * 0.01) * 20}px)`
+              }}
+            />
+          ))}
+        </div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-6xl mx-auto">
           <div className="animate-fade-in">
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
+            <h1 className="text-6xl md:text-8xl font-bold mb-12 leading-tight">
               We Create
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent block animate-pulse">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent block animate-pulse mb-8">
                 Digital Magic
               </span>
             </h1>
@@ -57,7 +92,7 @@ const Hero = () => {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fade-in mb-24" style={{ animationDelay: '0.4s' }}>
             <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-6 rounded-full font-semibold text-lg flex items-center gap-3 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25">
               Start Your Journey
               <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
@@ -69,23 +104,23 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Stats Section */}
-          <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          {/* Updated Stats Section */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">200+</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">700+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wide">Projects Delivered</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform">50+</div>
+              <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform">500+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wide">Happy Clients</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">10+</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">15+</div>
               <div className="text-gray-400 text-sm uppercase tracking-wide">Years Experience</div>
             </div>
             <div className="text-center group">
               <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">Support</div>
+              <div className="text-gray-400 text-sm uppercase tracking-wide">Instant Support</div>
             </div>
           </div>
         </div>

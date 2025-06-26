@@ -11,7 +11,7 @@ const stats = [
   },
   { 
     icon: <Users className="w-12 h-12" />, 
-    number: "500+", 
+    number: "700+", 
     label: "Projects Delivered",
     description: "From startups to Fortune 500 companies across 15+ industries"
   },
@@ -23,8 +23,8 @@ const stats = [
   },
   { 
     icon: <Clock className="w-12 h-12" />, 
-    number: "72hrs", 
-    label: "Average Response Time",
+    number: "24/7", 
+    label: "Instant Support",
     description: "Quick turnaround times without compromising on quality"
   }
 ];
