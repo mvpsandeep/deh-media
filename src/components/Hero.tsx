@@ -1,4 +1,3 @@
-
 import { ArrowRight, Play } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -23,18 +22,18 @@ const Hero = () => {
           }}
         ></div>
         
-        {/* Swirling galaxy arms */}
+        {/* Swirling galaxy arms with more subtle animation */}
         <div 
           className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-pink-600/20"
           style={{ 
-            transform: `rotate(${scrollY * 0.1}deg) scale(${1 + Math.sin(Date.now() * 0.001) * 0.1})`,
+            transform: `rotate(${scrollY * 0.1}deg) scale(${1 + Math.sin(Date.now() * 0.001) * 0.03})`,
             transformOrigin: 'center'
           }}
         ></div>
         <div 
           className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 via-transparent to-purple-600/25"
           style={{ 
-            transform: `rotate(${-scrollY * 0.08}deg) scale(${1 + Math.cos(Date.now() * 0.0008) * 0.12})`,
+            transform: `rotate(${-scrollY * 0.08}deg) scale(${1 + Math.cos(Date.now() * 0.0008) * 0.04})`,
             transformOrigin: 'center'
           }}
         ></div>
@@ -130,21 +129,21 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-50">
         <div className="text-center max-w-6xl mx-auto">
           <div className="animate-fade-in relative z-50">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 leading-tight relative z-50">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight relative z-50">
               We Create
             </h1>
-            <div className="relative z-50 mb-8 sm:mb-12 md:mb-16">
+            <div className="relative z-50 mb-6 sm:mb-8 md:mb-12 lg:mb-16">
               <span 
-                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold animate-pulse block leading-tight sm:leading-none"
+                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse block leading-tight relative z-[100]"
                 style={{ 
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   display: 'block',
-                  paddingBottom: '0.5em',
-                  lineHeight: '1.1',
-                  position: 'relative',
-                  zIndex: 100
+                  lineHeight: '1.2',
+                  transform: `scale(${1 + Math.sin(Date.now() * 0.001) * 0.02})`,
+                  marginTop: '0.5rem',
+                  marginBottom: '1rem'
                 }}
               >
                 Digital Magic
