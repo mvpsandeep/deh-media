@@ -97,22 +97,24 @@ const Hero = () => {
         ></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-50">
+      <div className="container mx-auto px-4 sm:px-6 relative z-50">
         <div className="text-center max-w-6xl mx-auto">
           <div className="animate-fade-in relative z-50">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight relative z-50">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 leading-tight relative z-50">
               We Create
             </h1>
-            <div className="relative z-50 mb-16">
+            <div className="relative z-50 mb-8 sm:mb-12 md:mb-16">
               <span 
-                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-6xl md:text-8xl font-bold animate-pulse block leading-none"
+                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold animate-pulse block leading-tight sm:leading-none"
                 style={{ 
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
                   display: 'block',
-                  paddingBottom: '0.25em',
-                  lineHeight: '0.9'
+                  paddingBottom: '0.5em',
+                  lineHeight: '1.1',
+                  position: 'relative',
+                  zIndex: 100
                 }}
               >
                 Digital Magic
@@ -121,41 +123,41 @@ const Hero = () => {
           </div>
           
           <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-16 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 sm:mb-14 md:mb-16 max-w-4xl mx-auto leading-relaxed px-4">
               Transform your digital presence with cutting-edge media solutions. We craft exceptional 
               experiences that captivate audiences and drive extraordinary results.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-8 justify-center items-center animate-fade-in mb-24" style={{ animationDelay: '0.4s' }}>
-            <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-12 py-6 rounded-full font-semibold text-lg flex items-center gap-3 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center animate-fade-in mb-16 sm:mb-20 md:mb-24 px-4" style={{ animationDelay: '0.4s' }}>
+            <button className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full font-semibold text-base sm:text-lg flex items-center gap-3 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 w-full sm:w-auto">
               Start Your Journey
-              <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform sm:w-6 sm:h-6" />
             </button>
             
-            <button className="group border-2 border-gray-600 hover:border-gray-400 px-12 py-6 rounded-full font-semibold text-lg flex items-center gap-3 transition-all hover:bg-white/10 shadow-2xl">
-              <Play size={24} className="group-hover:scale-110 transition-transform" />
+            <button className="group border-2 border-gray-600 hover:border-gray-400 px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 rounded-full font-semibold text-base sm:text-lg flex items-center gap-3 transition-all hover:bg-white/10 shadow-2xl w-full sm:w-auto">
+              <Play size={20} className="group-hover:scale-110 transition-transform sm:w-6 sm:h-6" />
               Watch Our Story
             </button>
           </div>
 
           {/* Updated Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 animate-fade-in px-4" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">700+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">Projects Delivered</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-purple-400 mb-2 group-hover:scale-110 transition-transform">700+</div>
+              <div className="text-gray-400 text-xs sm:text-sm uppercase tracking-wide">Projects Delivered</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform">500+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">Happy Clients</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-pink-400 mb-2 group-hover:scale-110 transition-transform">500+</div>
+              <div className="text-gray-400 text-xs sm:text-sm uppercase tracking-wide">Happy Clients</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">15+</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">Years Experience</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-blue-400 mb-2 group-hover:scale-110 transition-transform">15+</div>
+              <div className="text-gray-400 text-xs sm:text-sm uppercase tracking-wide">Years Experience</div>
             </div>
             <div className="text-center group">
-              <div className="text-4xl md:text-5xl font-bold text-red-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
-              <div className="text-gray-400 text-sm uppercase tracking-wide">Instant Support</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-400 mb-2 group-hover:scale-110 transition-transform">24/7</div>
+              <div className="text-gray-400 text-xs sm:text-sm uppercase tracking-wide">Instant Support</div>
             </div>
           </div>
         </div>
