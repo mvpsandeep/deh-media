@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -150,65 +149,35 @@
   }
 }
 
-/* Lightning Effect Animations */
-@keyframes lightning-flash {
+/* Galaxy Effect Animations */
+@keyframes twinkle {
   0%, 100% {
     opacity: 0.3;
-    filter: brightness(1);
+    transform: scale(1);
   }
-  10%, 15%, 25%, 30% {
-    opacity: 0.8;
-    filter: brightness(1.5);
-  }
-  20%, 35% {
-    opacity: 0.5;
-    filter: brightness(1.2);
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
 
-@keyframes lightning-pulse {
+@keyframes pulse {
   0%, 100% {
-    opacity: 0.2;
+    opacity: 0.8;
     transform: scale(1);
-    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0;
   }
   50% {
     opacity: 0.6;
-    transform: scale(1.1);
-    filter: brightness(1.3);
-  }
-}
-
-@keyframes lightning-spark {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(0.5);
-    filter: brightness(1);
-  }
-  20%, 80% {
-    opacity: 1;
-    transform: scale(1);
-    filter: brightness(2);
-  }
-  50% {
-    opacity: 0.8;
-    transform: scale(1.2);
-    filter: brightness(1.8);
-  }
-}
-
-@keyframes lightning-strike {
-  0%, 90%, 100% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  5%, 15% {
-    opacity: 0.8;
-    transform: translateX(0%);
-  }
-  10% {
-    opacity: 1;
-    transform: translateX(50%);
   }
 }
 
