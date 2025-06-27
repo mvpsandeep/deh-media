@@ -129,25 +129,22 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-50">
         <div className="text-center max-w-6xl mx-auto">
           <div className="animate-fade-in relative z-50">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight relative z-50">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight relative z-50">
               We Create
             </h1>
-            <div className="relative z-50 mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-              <span 
-                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold animate-pulse block leading-tight relative z-[100]"
+            <div className="relative z-50 mb-8 sm:mb-10 md:mb-12 lg:mb-16">
+              <h2 
+                className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold block leading-tight"
                 style={{ 
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  display: 'block',
-                  lineHeight: '1.2',
-                  transform: `scale(${1 + Math.sin(Date.now() * 0.001) * 0.02})`,
-                  marginTop: '0.5rem',
-                  marginBottom: '1rem'
+                  transform: `scale(${1 + Math.sin(Date.now() * 0.001) * 0.005})`,
+                  lineHeight: '1.2'
                 }}
               >
                 Digital Magic
-              </span>
+              </h2>
             </div>
           </div>
           
