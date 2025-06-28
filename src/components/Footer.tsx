@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Instagram, Linkedin, Github, Phone, MapPin } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -30,24 +30,6 @@ const Footer = () => {
                 <MapPin size={18} className="text-purple-400" />
                 <span>633 Vermont St, San Francisco, CA 94107, United States</span>
               </div>
-            </div>
-
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
-                <Github size={20} />
-              </a>
             </div>
           </div>
           

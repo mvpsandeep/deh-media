@@ -1,5 +1,5 @@
 
-import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const teamMembers = [
@@ -9,11 +9,7 @@ const teamMembers = [
     bio: "15+ years of experience in digital design and brand strategy. Previously led design teams at Adobe and Spotify.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     specialties: ["Brand Strategy", "UI/UX Design", "Creative Direction"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "david@dehmedia.com"
-    }
+    email: "david@dehmedia.com"
   },
   {
     name: "Elena Rodriguez",
@@ -21,11 +17,7 @@ const teamMembers = [
     bio: "Full-stack developer with expertise in scalable web applications. Former senior engineer at Google and Meta.",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=400&h=400&fit=crop&crop=face",
     specialties: ["Full-Stack Development", "System Architecture", "DevOps"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "elena@dehmedia.com"
-    }
+    email: "elena@dehmedia.com"
   },
   {
     name: "Marcus Johnson",
@@ -33,11 +25,7 @@ const teamMembers = [
     bio: "Digital marketing strategist with a track record of driving 300%+ growth for B2B and B2C companies.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     specialties: ["Digital Strategy", "Growth Marketing", "Analytics"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "marcus@dehmedia.com"
-    }
+    email: "marcus@dehmedia.com"
   },
   {
     name: "Sophie Williams",
@@ -45,11 +33,7 @@ const teamMembers = [
     bio: "User experience specialist focused on creating intuitive and accessible digital experiences for all users.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     specialties: ["User Research", "Interaction Design", "Accessibility"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "sophie@dehmedia.com"
-    }
+    email: "sophie@dehmedia.com"
   },
   {
     name: "Alex Kim",
@@ -57,11 +41,7 @@ const teamMembers = [
     bio: "Frontend specialist with expertise in React, Vue, and modern JavaScript frameworks. Passionate about performance optimization.",
     image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=400&h=400&fit=crop&crop=face",
     specialties: ["React/Vue.js", "Performance", "Mobile Development"],
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "alex@dehmedia.com"
-    }
+    email: "alex@dehmedia.com"
   },
   {
     name: "Maya Patel",
@@ -69,11 +49,7 @@ const teamMembers = [
     bio: "Content marketing expert who creates compelling narratives that drive engagement and conversions across all channels.",
     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop&crop=face",
     specialties: ["Content Strategy", "SEO", "Brand Voice"],
-    social: {
-      linkedin: "#",
-      twitter: "#",
-      email: "maya@dehmedia.com"
-    }
+    email: "maya@dehmedia.com"
   }
 ];
 
@@ -136,27 +112,10 @@ const Team = () => {
                 </div>
               </div>
               
-              <div className="flex justify-center gap-4">
-                {member.social.linkedin && (
-                  <a href={member.social.linkedin} className="text-gray-400 hover:text-purple-400 transition-colors">
-                    <Linkedin size={20} />
-                  </a>
-                )}
-                {member.social.twitter && (
-                  <a href={member.social.twitter} className="text-gray-400 hover:text-purple-400 transition-colors">
-                    <Twitter size={20} />
-                  </a>
-                )}
-                {member.social.github && (
-                  <a href={member.social.github} className="text-gray-400 hover:text-purple-400 transition-colors">
-                    <Github size={20} />
-                  </a>
-                )}
-                {member.social.email && (
-                  <a href={`mailto:${member.social.email}`} className="text-gray-400 hover:text-purple-400 transition-colors">
-                    <Mail size={20} />
-                  </a>
-                )}
+              <div className="flex justify-center">
+                <a href={`mailto:${member.email}`} className="text-gray-400 hover:text-purple-400 transition-colors">
+                  <Mail size={20} />
+                </a>
               </div>
             </div>
           ))}
