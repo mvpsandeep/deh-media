@@ -108,7 +108,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-gray-300 text-lg">+1 (555) 123-4567</p>
+                    <p className="text-gray-300 text-lg">+1 904 531 0621</p>
                     <p className="text-gray-400">Mon-Fri, 9AM-6PM EST</p>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Visit Our Studio</h3>
-                    <p className="text-gray-300 text-lg">123 Creative Avenue<br />Digital District, NY 10001</p>
+                    <p className="text-gray-300 text-lg">633 Vermont St<br />San Francisco, CA 94107<br />United States</p>
                     <p className="text-gray-400">Open by appointment</p>
                   </div>
                 </div>

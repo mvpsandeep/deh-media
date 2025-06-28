@@ -23,7 +23,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email Us</h3>
-                  <p className="text-gray-300">hello@digitalsilk.com</p>
+                  <p className="text-gray-300">hello@dehmedia.com</p>
                 </div>
               </div>
               
@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 904 531 0621</p>
                 </div>
               </div>
               
@@ -43,7 +43,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Visit Us</h3>
-                  <p className="text-gray-300">123 Digital Street<br />Tech City, TC 12345</p>
+                  <p className="text-gray-300">633 Vermont St<br />San Francisco, CA 94107<br />United States</p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,5 @@
 
-import { Facebook, Twitter, Instagram, Linkedin, Github } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Github, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -19,6 +19,19 @@ const Footer = () => {
               We create premium digital experiences that drive results. Partner with us to transform 
               your digital presence and accelerate growth through innovative media solutions.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-3 text-gray-300">
+                <Phone size={18} className="text-purple-400" />
+                <span>+1 904 531 0621</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <MapPin size={18} className="text-purple-400" />
+                <span>633 Vermont St, San Francisco, CA 94107, United States</span>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               <a href="#" className="w-10 h-10 bg-gray-800 hover:bg-purple-600 rounded-full flex items-center justify-center transition-colors">
                 <Facebook size={20} />
